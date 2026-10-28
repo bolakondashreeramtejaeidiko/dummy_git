@@ -19,6 +19,6 @@ CREATE COMPUTE MODULE git_application_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot = InputRoot;
+		SET OutputRoot.XMLNSC = InputRoot.JSON.Data;
 	END;
 END MODULE;
